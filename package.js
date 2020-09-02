@@ -10,7 +10,7 @@ Package.onUse(api => {
     'random'
   ], 'server');
 
-  api.use('package:oauth@1.3.1', ['client', 'server'])
+  api.use('pathable:oauth@1.3.1', ['client', 'server'])
 
   api.use(['service-configuration', 'ecmascript'], ['client', 'server']);
 
