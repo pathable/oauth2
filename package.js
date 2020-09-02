@@ -1,6 +1,8 @@
 Package.describe({
   summary: "Common code for OAuth2-based login services",
-  version: "1.3.1",
+  version: '1.3.1',
+  name: 'pathable:oauth2',
+  git: 'https://github.com/pathable/oauth2',
 });
 
 Package.onUse(api => {
@@ -8,11 +10,9 @@ Package.onUse(api => {
     'random'
   ], 'server');
 
-  api.use([
-    'oauth',
-    'service-configuration',
-    'ecmascript',
-  ], ['client', 'server']);
+  api.use('package:oauth@1.3.1', ['client', 'server'])
+
+  api.use(['service-configuration', 'ecmascript'], ['client', 'server']);
 
   api.addFiles('oauth2_server.js', 'server');
 });
